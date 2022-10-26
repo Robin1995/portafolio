@@ -1,0 +1,79 @@
+.navigation {
+    position: static;
+    display: flex;
+    width: 100%;
+    margin: 0 auto 40px;
+}
+.navigation .toggle {
+    display: none;
+}
+.navigation ul {
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 0;
+}
+.navigation ul li {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+.navigation li a {
+    height: 40px;
+    transition: transform 0.2s linear;
+}
+.navigation li a:hover {
+    transform: translateY(-4px);
+}
+.social-media {
+    max-width: 980px;
+    margin: 32px auto;
+}
+.intro {
+    font-weight: 400;
+    font-size: 1.08rem;
+}
+.tools-section ul {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.form {
+    max-width: 980px;
+    flex-flow: row wrap;
+}
+.social-media img {
+    animation: none;
+}
+.form * {
+    width: 50%;
+}
+.form label:first-child {
+    order: 1;
+}
+.form-label:not(:first-child) {
+    order: 2;
+    margin-left: 10px;
+    width: calc(50% - 10px);
+}
+#name {
+    order: 3;
+    margin-right: 10px;
+    width: calc(50% - 10px);
+}
+#email {
+    order: 4;
+    margin-left: 10px;
+    width: calc(50% - 10px);
+}
+.form .message-input {
+    width: 100%;
+    order: 5;
+    margin-top: 16px;
+}
+.form .send-button {
+    width: 150px;
+    order: 6;
+}
+.modal {
+    width: 550px;
+}

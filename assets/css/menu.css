@@ -1,0 +1,100 @@
+.navigation {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 20px;
+    width: calc(100% - 20px);
+    z-index: 100;
+}
+.toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+    flex-direction: row-reverse;
+    color: var(--color-primary);
+}
+.toggle::before {
+    content: "Menu";
+    margin-left: 10px;
+}
+.toggle.active::before {
+    content: "Close";
+}
+.toggle span {
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+.toggle span::before {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-primary);
+    transition: 0.5s;
+}
+.toggle span::after {
+    position: absolute;
+    content: "";
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-primary);
+    transition: 0.5s;
+}
+.toggle.active span::before {
+    transform: rotate(225deg);
+    top: 24px;
+}
+.toggle.active span::after {
+    transform: rotate(135deg);
+    bottom: 24px;
+}
+.navigation ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 0;
+    margin: 0;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-250px);
+    transition-delay: calc(0.1s * var(--i));
+}
+.navigation.active ul li {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+.navigation li a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 45px;
+    background: #fff;
+    color: #333;
+    transition: 0.5s;
+}
+.navigation ul li a:hover {
+    background: #f6f6f6;
+    color: var(--color-primary);
+    transition: 0;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" media="(min-width: 780px)" href="./assets/css/tablet.css">
+</head>
+
+<body>
+    <header>
+        <picture>
+            <img src="/assets/img/foto.jpeg" alt="Foto perfil">
+            <span class="theme"></span>
+        </picture>
+        <h1 class="title">Robinson Rodríguez</h1>
+        <h2 class="subtitle">Front End Developer</h2>
+        <nav class="navigation">
+            <div class="toggle"><span></span></div>
+            <ul>
+                <li style="--i:0"><a href="#about">Acerca de</a></li>
+                <li style="--i:1"><a href="#projects">Mis proyectos</a></li>
+                <li style="--i:2"><a href="#tools">Tecnologías</a></li>
+                <li style="--i:3"><a href="#contact">contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2 class="label">Acerca de</h2>
+            <p class="intro">Soy ingeniero de sistemas y computación certificado en AWS y freeCodeCamps que disfruta de
+                diseñar e implementar sistemas de software funcionales del lado del usuario final, me apasiona
+                el desarrollo front-end, me encantan los autos, el futbol y viajar con mi familia, si quieres hablar de
+                tecnología autos o futbol déjame un mensaje o búscame en mis redes sociales.</p>
+            <ul class="social-media">
+                <li tabindex="0" aria-labelledby="discord">
+                    <a href="https://discordapp.com/users/Robinson%20Fernando#1273" target="_blank">
+                        <img src="assets/img/logo-discord.png" alt="Discord" />
+                        <p id="discord" class="social-link-text">Discord</p>
+                    </a>
+                </li>
+                <li tabindex="0" aria-labelledby="github">
+                    <a href="https://github.com/Robin1995" target="_blank">
+                        <img src="assets/img/logo_Github.webp" alt="GitHub" />
+                        <p id="github" class="social-link-text">GitHub</p>
+                    </a>
+                </li>
+                <li tabindex="0" aria-labelledby="link">
+                    <a href="https://www.linkedin.com/in/robinson-fernando-rodriguez-aponte-096655151/"
+                        target="_blank"><img src="assets/img/logo_linkedin.webp" alt="LinkedIn" />
+                        <p id="linkedin" class="social-link-text">LinkedIn</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2 class="label-projects">Mis Proyectos</h2>
+            <div class="carousel">
+                <button class="arrow arrow-left" aria-label="backward button"></button>
+                <div class="window">
+                    <ul class="project-container">
+                        <li class="project1-container"><button class="project1 project"><img
+                                    src="assets/img/project-1.png" class="project-img"
+                                    alt="Mi primer proyecto" /></button></li>
+                        <li class="project2-container"><button class="project2 project"><img
+                                    src="assets/img/project-2.png" class="project-img"
+                                    alt="Mi segundo proyecto" /></button></li>
+                        <li class="project3-container"><button class="project3 project"><img
+                                    src="assets/img/project-3.png" class="project-img"
+                                    alt="Mi tercero proyecto" /></button></li>
+                        <li class="project4-container" aria-hidden="true"><button class="project4 project"
+                                tabindex="-1"><img src="assets/img/project-4.png" class="project-img"
+                                    alt="Mi cuarto proyecto" /></button></li>
+                        <li class="project5-container" aria-hidden="true"><button class="project5 project"
+                                tabindex="-1"><img src="assets/img/project-5.png" class="project-img"
+                                    alt="Mi quinto proyecto" /></button></li>
+                    </ul>
+                </div>
+                <button class="arrow arrow-right" aria-label="forward button"></button>
+            </div>
+        </section>
+        <section id="tools" class="tools-section">
+            <h2 class="header">Tecnologías que manejo</h2>
+            <ul>
+                <li><img src="assets/img/angular.webp" alt="Icono Angular"><span>Angular</span></li>
+                <li><img src="assets/img/typescript.png" alt="Icono Typescript"><span>TypeScript</span></li>
+                <li><img src="assets/img/aws.png" alt="Icono AWS"><span>AWS</span></li>
+                <li><img src="assets/img/reactjs.png" alt="Icono React"><span>ReactJs</span></li>
+                <li><img src="assets/img/sass.webp" alt="Icono Sass"><span>Sass</span></li>
+                <li><img src="assets/img/html-css.png" alt="Icono HTML-CSS"><span>HTML-CSS</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer id="contact" class="contact-section">
+        <h2 class="header contact">Contacto</h2>
+        <p class="intro">Para mandarme un mensaje puedes usar el siguiente formulario.</p>
+        <form class="form">
+            <label class="form-label">Nombre</label>
+            <input type="text" aria-label="nombre" id="name" name="name" required />
+            <br />
+            <label class="form-label">Correo</label>
+            <input id="email" name="email" type="text" aria-label="correo" required /> <br />
+            <label class="message-input">Mensaje<textarea id="message" name="message" type="text" required></textarea>
+                <br /></label>
+            <button class="send-button">Enviar</button>
+        </form>
+        <a href="mailto:fercho.rod16@gmail.com" id="mailanchor"></a>
+        <p class="created-by">© Robinson Rodríguez</p>
+    </footer>
+    <div class="modal-container">
+        <div class="modal">
+            <h2 class="header" id="modal-header" tabindex="0">Ejemplo de un proyecto mío</h2>
+            <img src="assets/img/project-1.png" title="Ir al proyecto" class="modal-project-image"
+                alt="un pantallazo de mi project" />
+            <button class="modal-button" title="Cerrar"></button>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
