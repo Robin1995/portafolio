@@ -111,10 +111,10 @@ function clickLeft() {
 
 function goToProject(project) {
     const redirects = [
-        'https://robin1995.github.io/simple-page/',
-        'https://robin1995.github.io/batata-bit/',
-        'https://robin1995.github.io/angular-apirest/',
-        'https://codepen.io/RobinsonDev/full/rNdQZPz',
+        'https://robin1995.github.io/simple-page',
+        'https://robin1995.github.io/batata-bit',
+        'https://robin1995.github.io/angular-apirest',
+        'https://robin1995.github.io/countdown',
         'https://codepen.io/RobinsonDev/full/GRxEKwG'
     ]
     window.open(redirects[project - 1]);
